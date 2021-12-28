@@ -1,0 +1,16 @@
+.TodoSearch {
+  margin: 0 auto;
+  width: 90%;
+  height: 40px;
+  border: 0;
+  margin-bottom: 50px;
+  background: transparent;
+  border-bottom: 1px solid #AD62AA;
+  color: var(--font-color);
+}
+
+::placeholder {
+  font-weight: bold;
+  text-align: center;
+  color: #fefefe;
+}
