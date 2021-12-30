@@ -1,7 +1,9 @@
 section {
   width: 100%;
-  min-height: 220px;
+  height: 35%;
+  min-height: 180px;
   margin: 0 auto;
+  overflow: scroll;
 }
 
 ul {
