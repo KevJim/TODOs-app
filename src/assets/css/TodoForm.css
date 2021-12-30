@@ -1,0 +1,55 @@
+.TodoForm {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #948fbd;
+  padding: 12px;
+  border-radius: 12px;
+  border: 2px solid #1d1f57;
+}
+
+.FormTitlte {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.TodoTextArea {
+  width: 80%;
+  min-height: 60px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.TodoTextArea::placeholder {
+  color: black;
+  text-align: center;
+  padding: 20px;
+}
+
+.ButtonsContainer {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.formbuttonCancel {
+  width: 70px;
+  height: 30px;
+  background: none;
+  border: 0;
+  font-weight: bold;
+}
+
+.formbuttonAdd {
+  width: 70px;
+  height: 30px;
+  background: var(--add);
+  border: 0;
+  border-radius: 12px;
+  font-weight: bold;
+  color: var(--font-color);
+}

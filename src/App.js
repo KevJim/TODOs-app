@@ -7,6 +7,10 @@ import { TodoList } from './components/TodoList';
 import { TodoItem } from './components/TodoItem';
 import { CreateTodoButton } from './components/CreateTodoButton';
 import { Footer } from './components/Footer';
+import { Modal } from './components/Modal';
+import { TodoForm } from './components/TodoForm';
+import { TodoLoading } from './components/TodoLoadings';
+import { Empty } from './components/Empty';
 import './App.css';
 
 // const defaultTodos = [
@@ -28,16 +32,26 @@ function App() {
        {({error, loading, searchedTodos, toggleCompleteTodo, deleteTodo}) => (
           <TodoList> 
             {error && <p>Desespérate, hubo un error...</p>}
-            {loading && <p>Estamos cargando, no desesperes...</p>}
-            {(!loading && !searchedTodos.length) && <p>¡Crea tu primer TODO!</p>}
+            {loading && <TodoLoading />}
+            {(!loading && !searchedTodos.length) && <Empty />}
             {searchedTodos.map(todo => (
               <TodoItem key={todo.text} text={todo.text} completed={todo.completed} onComplete={() => toggleCompleteTodo(todo.text)} onDelete={() => deleteTodo(todo.text)} />
             ))} 
           </TodoList>
        )}
       </TodoContext.Consumer>
-
-      <CreateTodoButton />
+      <TodoContext.Consumer>
+        {({visible, setVisible}) => (
+          <>
+            {!!visible && (
+              <Modal>
+                <TodoForm />
+              </Modal>
+            )}
+            <CreateTodoButton setVisible={setVisible} />
+          </>
+        )}
+      </TodoContext.Consumer>
       <Footer />
     </TodoProvider>
   );

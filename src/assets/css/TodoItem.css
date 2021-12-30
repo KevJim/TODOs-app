@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: space-between;
   width: 90%;
+  height: auto;
   min-height: 64px;
   margin: 0 auto;
   background-color: var(--card);
@@ -11,12 +12,15 @@
   border-radius: 18px;
   /* box-shadow: 10px 10px 5px 0px rgba(29,31,87,0.75); */
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  word-wrap: break-word;
 }
 
 .TodoItem-p {
   font-size: 2.3rem;
   font-weight: bold;
   color: var(--font-color);
+  overflow: hidden;
+  width: 70%;
 }
 .TodoItem-p--complete {
   text-decoration: line-through;

@@ -1,0 +1,21 @@
+.Empty {
+  width: 70%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.Empty img {
+  width: 80%;
+  height: 100%;
+}
+
+.Empty h2 {
+  font-size: 2.3rem;
+  text-align: center;
+  color: var(--font-color);
+  letter-spacing: 1.5px;
+}
